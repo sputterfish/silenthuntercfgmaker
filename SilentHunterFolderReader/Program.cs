@@ -24,21 +24,21 @@ namespace SilentHunterFolderReader
                             string location = o.ToString();
                             location = @location.TrimEnd(new[] { '\\' });
                             string runfrom = System.IO.Directory.GetCurrentDirectory();
-                            if (!File.Exists(@runfrom+@"\config.cfg"))//Change config.cfg to your filename
+                            if (!File.Exists(@runfrom+ @"\GenericPatcher.cfg"))//Change config.cfg to your filename
                             {
-                                FileStream fs1 = new FileStream("config.cfg", FileMode.OpenOrCreate, FileAccess.Write);//Change config.cfg to your filename
+                                FileStream fs1 = new FileStream("GenericPatcher.cfg", FileMode.OpenOrCreate, FileAccess.Write);//Change config.cfg to your filename
                                 StreamWriter writer = new StreamWriter(fs1);
                                 string line1 = @"ClientAreaWidth = 1184";
                                 string line2 = @"ClientAreaHeight = 765";
-                                string line3 = @"CameraManager.act = "+'"' + @location + '"';
-                                string line4 = @"EnvSim.act = " + '"' + @location + '"';
-                                string line5 = @"kernel.dll = " + '"' + @location + '"';
-                                string line6 = @"sh5.exe = " + '"' + @location + '"';
-                                string line7 = @"SHCollisions.act = " + '"' + @location + '"';
-                                string line8 = @"SHSound.act = " + '"' + @location + '"';
-                                string line9 = @"SH_NClient.dll = " + '"' + @location + '"';
-                                string line10 = @"SimData.dll = " + '"' + @location + '"';
-                                string line11 = @"LanguagePackInUse =";
+                                string line3 = @"CameraManager.act="+ @location;
+                                string line4 = @"EnvSim.act=" + @location;
+                                string line5 = @"kernel.dll=" + @location;
+                                string line6 = @"sh5.exe=" + @location;
+                                string line7 = @"SHCollisions.act=" + @location;
+                                string line8 = @"SHSound.act=" + @location;
+                                string line9 = @"SH_NClient.dll=" + @location;
+                                string line10 = @"SimData.dll=" + @location;
+                                string line11 = @"LanguagePackInUse=";
                                 writer.WriteLine(line1);
                                 writer.WriteLine(line2);
                                 writer.WriteLine(line3);
