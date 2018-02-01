@@ -24,9 +24,8 @@ namespace SilentHunterFolderReader
                             string location = o.ToString();
                             location = @location.TrimEnd(new[] { '\\' });
                             string runfrom = System.IO.Directory.GetCurrentDirectory();
-                            if (!File.Exists(@runfrom+ @"\GenericPatcher.cfg"))//Change config.cfg to your filename
-                            {
-                                FileStream fs1 = new FileStream("GenericPatcher.cfg", FileMode.OpenOrCreate, FileAccess.Write);//Change config.cfg to your filename
+
+                            FileStream fs1 = new FileStream("GenericPatcher.cfg", FileMode.OpenOrCreate, FileAccess.Write);
                                 StreamWriter writer = new StreamWriter(fs1);
                                 string line1 = @"ClientAreaWidth=1184";
                                 string line2 = @"ClientAreaHeight=765";
@@ -53,7 +52,7 @@ namespace SilentHunterFolderReader
                                 writer.WriteLine(line11);
                                 writer.WriteLine(line12);
                                 writer.Close();
-                            }
+                            
 
                         }
                     }
