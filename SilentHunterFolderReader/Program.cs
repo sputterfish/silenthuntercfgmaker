@@ -28,17 +28,18 @@ namespace SilentHunterFolderReader
                             {
                                 FileStream fs1 = new FileStream("GenericPatcher.cfg", FileMode.OpenOrCreate, FileAccess.Write);//Change config.cfg to your filename
                                 StreamWriter writer = new StreamWriter(fs1);
-                                string line1 = @"ClientAreaWidth = 1184";
-                                string line2 = @"ClientAreaHeight = 765";
+                                string line1 = @"ClientAreaWidth=1184";
+                                string line2 = @"ClientAreaHeight=765";
                                 string line3 = @"CameraManager.act="+ @location;
                                 string line4 = @"EnvSim.act=" + @location;
                                 string line5 = @"kernel.dll=" + @location;
                                 string line6 = @"sh5.exe=" + @location;
                                 string line7 = @"SHCollisions.act=" + @location;
-                                string line8 = @"SHSound.act=" + @location;
-                                string line9 = @"SH_NClient.dll=" + @location;
-                                string line10 = @"SimData.dll=" + @location;
-                                string line11 = @"LanguagePackInUse=";
+                                string line8 = @"SHSim.act=" + @location;
+                                string line9 = @"SHSound.act=" + @location;
+                                string line10 = @"SH_NClient.dll=" + @location;
+                                string line11 = @"SimData.dll=" + @location;
+                                string line12 = @"LanguagePackInUse=";
                                 writer.WriteLine(line1);
                                 writer.WriteLine(line2);
                                 writer.WriteLine(line3);
@@ -50,6 +51,7 @@ namespace SilentHunterFolderReader
                                 writer.WriteLine(line9);
                                 writer.WriteLine(line10);
                                 writer.WriteLine(line11);
+                                writer.WriteLine(line12);
                                 writer.Close();
                             }
 
